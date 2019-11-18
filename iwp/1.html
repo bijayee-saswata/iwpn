@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="click">Hello World!!!</h1>
+    <script>
+        /* Normal function */
+        // function call(){
+        //     console.log("Hello...");
+            
+        // }
+        // call();
+
+        /*event listener*/
+        document.getElementById("click").addEventListener("click",function(){
+            console.log("You clicked the text.");
+            document.getElementById("click").style.backgroundColor = "red";
+        })
+
+        document.getElementById("click").addEventListener("mouseover",function(){
+            console.log("mouseover.");
+            document.getElementById("click").style.backgroundColor = "green";
+        })
+        document.getElementById("click").addEventListener("mouseout",function(){
+            console.log("mouseout");
+            document.getElementById("click").style.backgroundColor = "lightblue";
+        })
+    </script>
+</body>
+</html>

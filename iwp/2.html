@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" placeholder="enter a number">
+    <button onclick="display()">Go</button>
+    <div id="list"></div>
+    <script>
+        var users = [
+            {
+                id: 1,
+                name: 'user1',
+                age: 10
+            },
+            {
+                id: 2,
+                name: 'user2',
+                age: 15
+            },
+            {
+                id: 3,
+                name: 'user3',
+                age: 20
+            }
+        ]
+        function display(){
+
+            var x = document.querySelector('input').value;
+            user(x-1);
+        }
+        function user(x) {
+            if(x > users.length || x< 0 )
+                {
+                    document.getElementById("list").innerHTML = "No user found";
+                }
+            else{
+
+                document.getElementById("list").innerHTML = `
+                    <ul>
+                        <li>Id : ${users[x].id}</li>
+                        <li>Name : ${users[x].name}</li>
+                        <li>Age : ${users[x].age}</li>
+                    </ul>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
